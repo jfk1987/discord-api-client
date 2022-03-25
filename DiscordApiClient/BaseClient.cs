@@ -5,7 +5,18 @@
     /// </summary>
     public partial class DiscordClient
     {
-        DiscordClientConfig _config;
+        /// <summary>
+        /// Private property to hold the configuration
+        /// </summary>
+        private readonly DiscordClientConfig _config;
+
+        /// <summary>
+        /// Public property to access the configuration
+        /// </summary>
+        public DiscordClientConfig Config 
+        { 
+            get => _config;
+        }
 
         /// <summary>
         /// Base constructor
@@ -15,5 +26,6 @@
         {
             _config = config;
         }
+
     }
 }
