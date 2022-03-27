@@ -30,5 +30,19 @@ namespace DiscordApiClient.Clients
             _config = config;
             _client = new RestClient(config);
         }
+
+        public T Deserialize<T>(string data)
+        {
+            var deserializedObject = JsonSerializer.Deserialize<T>(data);
+
+            return deserializedObject;
+        }
+
+        public string Serialize<T>(T data)
+        {
+            var serializedText = JsonSerializer.Serialize(data);
+
+            return serializedText;
+        }
     }
 }
