@@ -1,4 +1,6 @@
-﻿namespace DiscordApiClient
+﻿using System.Text.Json;
+
+namespace DiscordApiClient.Clients
 {
     /// <summary>
     /// Base client class for initialization and main logic
@@ -28,6 +30,5 @@
             _config = config;
             _client = new RestClient(config);
         }
-
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace DiscordApiClient
+﻿using DiscordApiClient.Models.GuildScheduledEvent;
+
+namespace DiscordApiClient.Clients
 {
     public partial class DiscordClient
     {
@@ -23,6 +25,11 @@
             if(guildId == null)
             {
                 guildId= _config.GuildId;
+            }
+
+            if(guildId == null)
+            {
+                throw new GuildScheduledEventException("No guild id transmitted!");
             }
         }
 

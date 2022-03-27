@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace DiscordApiClient
+namespace DiscordApiClient.Models.GuildScheduledEvent
 {
 
     public partial class GuildScheduledEvent
