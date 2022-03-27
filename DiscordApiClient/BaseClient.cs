@@ -9,6 +9,7 @@
         /// Private property to hold the configuration
         /// </summary>
         private readonly DiscordClientConfig _config;
+        private readonly RestClient _client;
 
         /// <summary>
         /// Public property to access the configuration
@@ -25,6 +26,7 @@
         public DiscordClient(DiscordClientConfig config)
         {
             _config = config;
+            _client = new RestClient(config);
         }
 
     }
